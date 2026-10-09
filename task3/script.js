@@ -1,3 +1,5 @@
+let message = document.getElementById("message")
+
 const validateForm = (event) => {
 
     event.preventDefault()
@@ -6,11 +8,17 @@ const validateForm = (event) => {
     let password = event.target.password
 
     if (username.value === "" && password.value === "") {
-        console.log("enter username and password");
+        message.innerHTML="enter username and password"
+
     } else if (username.value === "") {
-        console.log("Enter username");
+        message.innerHTML="Enter username"
+
     } else if (password.value === "") {
-        console.log("enter password");
+        message.innerHTML="enter password"
+    
+    }else {
+        message.innerHTML="";
+
     }
 
     
